@@ -35,10 +35,14 @@ Angular CLI uses node & its associated package manager(npm,yarn,pnpm) to install
 
 Node can be installed `using` nvm, fnm, docker `with` npm, yarn or pnpm
 
-**Create angular app in your local**
+**Create new angular app in your local**
 
 - `npm install -g @angular/cli` => install angular cli
 - `ng new <my-app>`             => create angular app with boiler code
 - `cd <my-app>`             
 - `ng serve`                    => starts the local server
+
+Angular applications are modular in nature, 2-way data binding, dependency injection, lat loading, tree-shaking, component based routing, cross platform(web,mobile,desktop). 
+
+**angular.json -** Project specific configuration/settings => We can change port, name of index.html/main.ts, build related rules. Basically we can customize all things about our project
 
