@@ -42,7 +42,12 @@ Node can be installed `using` nvm, fnm, docker `with` npm, yarn or pnpm
 - `cd <my-app>`             
 - `ng serve`                    => starts the local server
 
-Angular applications are modular in nature, 2-way data binding, dependency injection, lat loading, tree-shaking, component based routing, cross platform(web,mobile,desktop). 
+Angular applications are modular in nature, 2-way data binding, dependency injection, lazy loading, tree-shaking, component based routing, cross platform(web,mobile,desktop). 
 
 **angular.json -** Project specific configuration/settings => We can change port, name of index.html/main.ts, build related rules. Basically we can customize all things about our project
 
+**Learn about SSR & static site generation, also about server routing & App engine API, learn about RxJS**
+
+- Angular uses real DOM, means change done in entire tree structure using *change detection*.
+- Angular does not require state management libraries though we have RxJS & NgRx
+- Angular use Observables instead of Promise because Angular prefers reactive programming (RxJS(reactive extension for JS) allows reactive programming)
