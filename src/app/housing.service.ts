@@ -11,7 +11,7 @@ export class HousingService {
 
 
   async getAllHousingLocation(): Promise <Housinglocation[]>{
-    const data = await fetch(this.url);
+    const data = await fetch(this.url);                                    
     return await data.json() ?? []
   }
   async getHousingLocationById(id:number): Promise <Housinglocation | undefined> {
@@ -22,4 +22,7 @@ export class HousingService {
   submitApplication(firstName:string, lastName:string, email:string){
      
   }
+
+   // We can use http client service class(recommended) in place of browser's fetch(), http client provide automatic json parsing, error handling & work well 
+   // with RxJS(observables)
 }

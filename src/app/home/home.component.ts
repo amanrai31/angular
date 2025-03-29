@@ -3,11 +3,11 @@ import { CommonModule } from '@angular/common';
 import { HousingLocationComponent } from '../housing-location/housing-location.component';
 import { Housinglocation } from '../housinglocation';
 import { HousingService } from '../housing.service';
-@Component({
+@Component({                                            
   selector: 'app-home',
   standalone: true,
   imports: [CommonModule, HousingLocationComponent],  
-  template: `
+  template: `                                           
     <section>
       <form>
       <input type="text" placeholder="Filter by city" #filter>
