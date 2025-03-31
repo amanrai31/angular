@@ -66,3 +66,61 @@ Where we can use DI => service(most common), component, directives, pipes, guard
 Passing data in components from parent to child with *@Input* properties.
 
 ---
+
+1. [] => Property binding, one-way, flow is from component to UI. Used for rendering purpose only. Any change in component reflect in UI. Works with HTML attributes(like src, href, disabled)
+        e.g. <img [src]="imageUrl"> => if imageUrl change the image updates. **Here src is HTML attribute not th element content** 
+
+2. {{}} => Interpolation, one-way, flow is from component to UI. e.g. <h1> Username - {{userName}} </h1>. Any change in component reflect in UI.
+
+**NOTE :** Diff b/w [] & {{}} => {{}} works only inside element content([] - works inside HTML attribute), works only with strings ([]- works with any data type).
+
+**NOTE :** ```html <p [innerText]="title"></p>```, technically we can use [innerText] instead of {{}} but ```html <p>{{title}}</p>``` is more readable.
+
+3. [()] => Data binding, two-way, sync b/w component and UI. Uses [(ngModel)]. UseCase => We can use this for input boxes. 
+
+4. () => Event binding, listen for selection change event. 
+
+
+----
+### Directives in Angular
+
+Directives allow to modify the structure, behavior or appearance of elements in DOM.
+
+1. Component Directives → (@Component) - Special type of directive with a template.(Every Angular component is a directive but not every directive is a component.)
+
+2.  Structural Directives (Always start with * ) => Used to modify the DOM structure (add/remove elements dynamically).
+
+- ***ngIf** => structural directive (for conditions, if we have to show some component/template or not)
+- ***ngFor** => looping directive   (for loop)
+
+3. Attribute directive(Always inside square bracket - []) => Modify the appearance or behavior of elements.
+
+- **[ngClass]** => Dynamically add CSS classes. e.g. ```<p [ngClass]="{'red-text': isError, 'bold-text': isBold}">Hello World</p>```. Define isError & isBold in component.
+
+- **[ngStyle]** => ```html <p [ngStyle]="{'color': textColor, 'font-size.px': fontSize}">Styled Text</p>```
+
+
+**NOTE =====>** We can make custom directive too ```ng g d <directiveName>```. Learn more about this.
+
+---
+
+### Router, http client, template variable
+
+**Router outlet =>** A placeholder where angular loads component dynamically based on current route.
+
+1. Dynamically component loading - no need for multiple HTML pages
+2. Efficient navigation - Browser never reloads page, makes nav fast
+
+**HTTP client =>** Look at service file about http client.
+
+**Template variable =>** It is a reference to a DOM element, component, or directive inside a template. It allows to interact with elements without using component class properties. Use the ```#``` followed by a variable name *inside a template*
+
+```html
+<input #userInput type="text">
+<button (click)="logInput(userInput.value)">Log Input</button>
+
+```
+
+The #userInput reference the <input> element.
+
+**Component class properties** => variable defined inside the TypeScript class of a component. Normal variables.
