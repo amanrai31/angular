@@ -80,7 +80,7 @@ Passing data in components from parent to child with *@Input* properties.
 
 3. [()] => Data binding, two-way, sync b/w component and UI. Uses [(ngModel)]. UseCase => We can use this for input boxes. 
 
-4. () => Event binding, listen for selection change event. 
+4. () => Event binding, listen for selection change event. Uni-directional from UI to component  
 
 
 ----
