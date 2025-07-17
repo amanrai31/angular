@@ -70,7 +70,7 @@ Passing data in components from parent to child with *@Input* properties.
 1. [] => Property binding, one-way, flow is from component to UI. Used for rendering purpose only. Any change in component reflect in UI. Works with HTML attributes(like src, href, disabled)
         e.g. <img [src]="imageUrl"> => if imageUrl change the image updates. **Here src is HTML attribute not th element content** 
 
-2. {{}} => Interpolation, one-way, flow is from component to UI. e.g. <h1> Username - {{userName}} </h1>. Any change in component reflect in UI.
+2. {{}} => Interpolation, one-way, flow is from component to UI. e.g. `<h1> Username - {{userName}} </h1>`. Any change in component reflect in UI.
 
 **NOTE :** Diff b/w [] & {{}} => {{}} works only inside element content([] - works inside HTML attribute), works only with strings ([]- works with any data type).
 
