@@ -67,6 +67,8 @@ Passing data in components from parent to child with *@Input* properties.
 
 ---
 
+## Bindings
+
 1. [] => Property binding, one-way, flow is from component to UI. Used for rendering purpose only. Any change in component reflect in UI. Works with HTML attributes(like src, href, disabled)
         e.g. <img [src]="imageUrl"> => if imageUrl change the image updates. **Here src is HTML attribute not th element content** 
 
